@@ -12,11 +12,19 @@ Before making changes, read the [Architecture Guide](docs/architecture.md). It e
    https://github.com/skyflo-ai/skyflo/issues
 2. **Fork & Clone**: Fork the repository and clone it locally
 3. **Setup**: Install dependencies and configure your development environment
-4. **Create a Branch**:  
+4. **Install Pre-commit Hooks**:
+
+   ```bash
+   pip install pre-commit
+   pre-commit install
+   ```
+
+   This runs `ruff` lint and format checks on staged files before every commit.
+5. **Create a Branch**:  
    - `feature/<issue-number>-description`  
    - `fix/<issue-number>-description`
-5. **Make Changes**: Follow coding standards and add tests where applicable
-6. **Submit a PR**: Open a pull request with a clear description
+6. **Make Changes**: Follow coding standards and add tests where applicable
+7. **Submit a PR**: Open a pull request with a clear description
 
 ## Coding Standards
 
@@ -96,6 +104,16 @@ Before requesting maintainer review, confirm:
 - [ ] No redundant or obvious comments
 - [ ] TypeScript types match backend contracts
 - [ ] Errors do not expose internal details
+
+## Inactivity Policy
+
+To keep the project moving and fair to all contributors:
+
+- **Issue assignments**: If no PR is opened within 7 days of assignment, the issue may be unassigned without notice.
+- **PR review responses**: After receiving review feedback, contributors have 7 days to respond or push updates. After 14 days of inactivity, the PR will be closed and the issue unassigned.
+- **Merge conflicts**: Contributors are responsible for keeping their PR rebased against `main`. PRs with unresolved merge conflicts for more than 7 days may be closed.
+
+These timelines can be extended if the contributor communicates delays proactively.
 
 ## License
 
